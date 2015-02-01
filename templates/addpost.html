@@ -1,0 +1,22 @@
+{% extends "add.html" %}
+{% block add %}
+			<section class="{{entry}}" name="{{entry}}">
+				<form method="post">
+					<h4>Title {{entry}}</h4>
+					<input type="text" name="title" class="title" value="{{title}}"></input>
+					<h4>Content</h4>
+					<textarea name="content">{{content}}</textarea>
+
+					<h5>Where are you?</h5>
+					<input type="text" class="foot" name="location" value="{{location}}"></input>
+
+					<h5>Tags (not required)</h5>
+					<input type="text" class="foot" name="tags" value="{{tags}}">
+						<aside>
+							{{error}}
+						</aside>
+						<h5>Delete</h5><input type="checkbox" value="True" name="delete">
+					<input type="submit">
+				</form>
+			</section>
+{% endblock %}

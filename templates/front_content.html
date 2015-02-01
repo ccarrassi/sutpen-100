@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+
+{% block content %}
+<header class="splash">
+				<!-- <div class="lead-container">
+				</div> -->
+				
+					<h1>Sutpen</h1>
+					
+			</header>
+	{% for each in entries %}
+			<section class="{{each.class_name()}}">
+				<article>
+					<header class="article-header">
+						<a href="/{{each.key().name()}}">
+							<h2>
+						{% if each.class_name() == 'Quote' %}
+						{{each.quote}}
+						{% else %}
+						{{each.title}}
+						{% endif %}
+							</h2>
+						</a>
+						
+					</header>
+
+					<section class="content">
+						{% if each.class_name() == 'Quote' %}
+							{{each.source}}
+						{% elif each.class_name() == 'Image' %}
+							{% for those in each.urls %}
+							<img src="{{those}}">
+							{% endfor %}
+						{% else %}
+							{{each.content}}
+						{% endif %}
+
+					</section>
+					<footer class="article-footer">
+						<div class="author"><a href="/edit/{{each.key().name()}}">submitted by</a> <a href="/user/{{each.author}}" class="author-name">{{each.author}}</a></div>
+						<span class="date">{{each.created.month}}/{{each.created.day}}/{{each.created.year}}</span>
+						<span class="location">{{each.location}}</span><br>
+						<div class="tags">
+							{% for those in each.tags %}
+							<a class="tag" href="/tag/{{"_".join(each.tags[each.tags.index(those)].split(" "))}}">{{each.tags[each.tags.index(those)]}}</a>
+							{% endfor %}
+						</div>
+
+					</footer>
+				</article>
+			</section>
+	{% endfor %}
+	<div id="pager" class="pager_box">
+		<a href="{{route[0]}}">
+		<div id="page" class="{{page}}">
+			<img src="http://imgur.com/SJhACLl.png" class="left-arrow">
+		</div>
+		</a>
+		<a href="{{route[1]}}">
+		<div class="right">
+			<img src="http://i.imgur.com/71Oyu9L.png" class="right-arrow">
+		</div></a>
+	</div>
+{% endblock %}

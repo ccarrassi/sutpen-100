@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Sutpen</title>
+		<link type="text/css" rel="stylesheet" href="../stylesheets/style.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed|Fanwood+Text|Lobster|Oswald:700|Cardo' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="../stylesheets/script.js"></script>
+	</head>
+
+	<body>
+		<div class="pageContainer">
+			<div id="navigation" class="invisible">
+						<ul class="nav">
+							<li><div class="nav-button"><a href="/">Home</a></div></li>
+							<li id="new-li"><div id="new" class="nav-button">New</div>
+							<ul class="subnav">
+								<a href="/new?cat=Article">
+									<li>
+										<div class="subnav-button">
+											&#9998;
+										</div>
+									</li>
+								</a>
+								<a href="/new?cat=Quote">
+									<li>
+										<div class="subnav-button">
+											&#10077;
+										</div>
+									</li>
+								</a>
+								<a href="/new?cat=Image">
+									<li>
+										<div class="subnav-button">
+											&#10697;
+										</div>
+									</li>
+								</a>
+								<a>
+									<li>
+										<div class="subnav-button">
+											&#10005;
+										</div>
+									</li>
+								</a>
+							</ul>
+							</li>
+							<li><div class="nav-button"><a href="/login">Login</a></div></li>
+							<li><div class="nav-button"><a href="/logout">Logout</a></div></li>
+						</ul>
+					</div>
+				<nav id="menu">
+					<div class="nav-bar">&#9776;</div>
+				</nav>
+			{% block content %}
+			{% endblock %}
+			<aside>
+				<h3>Recent Posts</h3>
+				<ul>
+					<li><a href="/blogpost">Blog Post</a></li>
+					<li><a href="/blogpost">Blog Post</a></li>
+					<li><a href="/blogpost">Blog Post</a></li>
+					<li><a href="/blogpost">Blog Post</a></li>
+				</ul>
+			</aside>
+		</div>
+	</body>
+</html>
+
+

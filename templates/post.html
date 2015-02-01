@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block content %}
+	{% if quote %}
+			<article>
+				<header class="article-header">
+					<a href="/{{key}}"><h2>{{quote}}</h2></a>
+				</header>
+				<section class="content">{{content}}</section>
+				<footer class="article-footer">
+					<span class="date">{{date}}</span>
+					<span class="location">{{location}}</span>
+
+				</footer>
+			</article>
+
+	{% else %}
+			<article>
+				<header class="article-header">
+					<a href="/{{key}}"><h2>{{title}}</h2></a>
+				</header>
+				<section class="content">{{content}}</section>
+				<footer class="article-footer">
+					<span class="date">{{date}}</span>
+					<span class="location">{{location}}</span>
+
+				</footer>
+			</article>
+			
+	{% endif %}
+{% endblock %}

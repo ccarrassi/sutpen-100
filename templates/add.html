@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="add_menu">
+        <a href="/new?cat=Article">
+            <div class="add_article">&#9998;
+            </div>
+        </a>
+        <a href="/new?cat=Quote">
+            <div class="add_quote">&#10077;
+            </div>
+        </a>
+        <a href="/new?cat=Image">
+            <div class="add_image">&#10697;
+            </div>
+        </a>
+    </div>
+    
+    {% block add %}
+    {% endblock %}
+{% endblock %}

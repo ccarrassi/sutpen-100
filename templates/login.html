@@ -1,0 +1,11 @@
+{% extends "template.html" %}
+
+{% block entry %}
+
+<form method="post">
+	Username: <input type="text" name="username" value="{{username}}"><br>
+	Password: <input type="password" name="password" value="{{password}}"><br>
+	{{user_error}}<br>
+	<input type="submit">
+
+{% endblock %}

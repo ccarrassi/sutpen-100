@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+	background: ;
+}
+
+.page-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+	text-align: center;
+	margin: .1em;
+	padding: .5em;
+}
+
+section {
+	display: block;
+}
+
+textarea {
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	height: 30em;
+	resize: vertical;
+	outline: solid;
+}
+
+input[type=submit] {
+	border-radius: 5px;
+	background-color: #FFF;
+	color: #000;
+	width: 10em;
+	height: 3em;
+	font-size: 1em;
+	display: block;
+	margin: 1em auto;
+	outline: none;
+}
+
+input[type=text] {
+	margin: 0 auto;
+	display: block;
+	width: 30%;
+	outline: solid;
+}
+
+input[type=text].title {
+	width: 60%;
+}
